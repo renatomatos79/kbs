@@ -4,8 +4,8 @@ metadata:
   name: mongodb-secret
 type: Opaque
 data:
-  mongo-root-username: LW4gJ2FkbWluJyANCg==
-  mongo-root-password: LW4gJ2FkbWluQDEyMycgDQo=
+  mongo-root-username: YWRtaW4=
+  mongo-root-password: YWRtaW5AMTIz
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -46,7 +46,7 @@ metadata:
   name: mongodb-service
 spec:
   selector:
-    app: mngodb
+    app: mongodb
   ports:
     - protocol: TCP
       port: 27017

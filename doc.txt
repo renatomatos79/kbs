@@ -1,0 +1,23 @@
+kubectl delete -f mongo-deployment.yaml
+kubectl delete -f mongo-express-deployment.yaml
+kubectl apply -f mongo-deployment.yaml 
+kubectl apply -f mongo-express-deployment.yaml
+
+kubectl get secret 
+kubectl get service 
+kubectl get deployment 
+kubectl get pod 
+
+kubectl describe pod mongodb-deployment-5c6cb48b59-jtz5x
+kubectl logs mongodb-deployment-5c6cb48b59-jtz5x
+
+minikube service mongodb-express-service -n development
+
+kubectl config view
+
+kubectl config set-context dev --namespace=development --cluster=minikube --user=minikube
+kubectl config set-context stage --namespace=stage --cluster=minikube --user=minikube
+
+kubectl config use-context dev
+
+kubectl config current-context
